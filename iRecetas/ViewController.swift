@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UITableViewController {
     
+    //Array donde almacenaremos todas las recetas
     var recetas : [Recetas] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        //Lista de recetas  a mostrar
        var receta = Recetas(nombre: "Ensalada Rusa")
         recetas.append(receta)
     
