@@ -21,6 +21,11 @@ class ViewController: UITableViewController {
         receta = Recetas(nombre: "Pollo alast")
         recetas.append(receta)
         
+        receta = Recetas(nombre: "Pizza Napolitana")
+        recetas.append(receta)
+        
+        receta = Recetas(nombre: "Paellla a la Valenciana")
+        recetas.append(receta)
         
     }
     
