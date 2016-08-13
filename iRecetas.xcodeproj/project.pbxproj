@@ -12,6 +12,7 @@
 		87BD86EE1D5E655900C4D6EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BD86EC1D5E655900C4D6EF /* Main.storyboard */; };
 		87BD86F01D5E655900C4D6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BD86EF1D5E655900C4D6EF /* Assets.xcassets */; };
 		87BD86F31D5E655900C4D6EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BD86F11D5E655900C4D6EF /* LaunchScreen.storyboard */; };
+		87BD86FB1D5E689100C4D6EF /* Recetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD86FA1D5E689100C4D6EF /* Recetas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		87BD86EF1D5E655900C4D6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BD86F21D5E655900C4D6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BD86F41D5E655900C4D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BD86FA1D5E689100C4D6EF /* Recetas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recetas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		87BD86DC1D5E655900C4D6EF = {
 			isa = PBXGroup;
 			children = (
+				87BD86FA1D5E689100C4D6EF /* Recetas.swift */,
 				87BD86E71D5E655900C4D6EF /* iRecetas */,
 				87BD86E61D5E655900C4D6EF /* Products */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BD86FB1D5E689100C4D6EF /* Recetas.swift in Sources */,
 				87BD86EB1D5E655900C4D6EF /* ViewController.swift in Sources */,
 				87BD86E91D5E655900C4D6EF /* AppDelegate.swift in Sources */,
 			);

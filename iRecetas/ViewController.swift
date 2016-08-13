@@ -8,18 +8,58 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    var recetas : [Recetas] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      
+       var receta = Recetas(nombre: "Ensalada Rusa")
+        recetas.append(receta)
+    
+        receta = Recetas(nombre: "Pollo alast")
+        recetas.append(receta)
+        
+        
+    }
+    
+    // MARK: UITableViewDataSource
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+        return recetas.count
+    
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+      let recetas = self.recetas[indexPath.row]
+    
+      let cellID = "cellIdentifier"
+        
+      let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+      cell.textLabel?.text = recetas.nombre
+        
+        return cell
+    
+    }
+    
 
 
-}
+  
+  }
 
+
+
+
+    
