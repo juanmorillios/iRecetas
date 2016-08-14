@@ -19,9 +19,9 @@ class Recetas: NSObject {
     
     
     //Creamos el constructor de la clase
-    init(nombre: String) {
-      self.nombre = nombre
-    
+    init(nombre: String, image: UIImage) {
+        self.nombre = nombre
+        self.image = image
     }
     
 }

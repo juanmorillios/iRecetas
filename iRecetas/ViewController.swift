@@ -17,19 +17,21 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
       
         //Lista de recetas  a mostrar
-       var receta = Recetas(nombre: "Ensalada Rusa")
+        var receta = Recetas(nombre: "Ensalada Rusa", image: #imageLiteral(resourceName: "paella"))
         recetas.append(receta)
     
-        receta = Recetas(nombre: "Pollo alast")
+        receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"))
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Pizza Napolitana")
+        receta = Recetas(nombre: "Pizza Napolitana", image: #imageLiteral(resourceName: "pizza"))
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Paellla a la Valenciana")
+        receta = Recetas(nombre: "Paellla a la Valenciana", image: #imageLiteral(resourceName: "paella"))
         recetas.append(receta)
         
     }
+    
+
     
     // MARK: UITableViewDataSource
     
@@ -39,7 +41,7 @@ class ViewController: UITableViewController {
         return 1
         
     }
-
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
@@ -56,6 +58,7 @@ class ViewController: UITableViewController {
         
       let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
       cell.textLabel?.text = recetas.nombre
+      cell.imageView?.image = recetas.image
         
         return cell
     
