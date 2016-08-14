@@ -14,6 +14,8 @@
 		87BD86F31D5E655900C4D6EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BD86F11D5E655900C4D6EF /* LaunchScreen.storyboard */; };
 		87BD86FB1D5E689100C4D6EF /* Recetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD86FA1D5E689100C4D6EF /* Recetas.swift */; };
 		87BD87231D60B7E600C4D6EF /* RecetaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD87221D60B7E600C4D6EF /* RecetaCell.swift */; };
+		87BD87251D60C89E00C4D6EF /* SingleVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD87241D60C89E00C4D6EF /* SingleVIewController.swift */; };
+		87BD87271D60CA3B00C4D6EF /* RecetaCompletaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BD87261D60CA3B00C4D6EF /* RecetaCompletaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		87BD86F41D5E655900C4D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87BD86FA1D5E689100C4D6EF /* Recetas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recetas.swift; path = ../Recetas.swift; sourceTree = "<group>"; };
 		87BD87221D60B7E600C4D6EF /* RecetaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecetaCell.swift; sourceTree = "<group>"; };
+		87BD87241D60C89E00C4D6EF /* SingleVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleVIewController.swift; sourceTree = "<group>"; };
+		87BD87261D60CA3B00C4D6EF /* RecetaCompletaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecetaCompletaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		87BD86DC1D5E655900C4D6EF = {
 			isa = PBXGroup;
 			children = (
+				87BD87261D60CA3B00C4D6EF /* RecetaCompletaTableViewCell.swift */,
+				87BD87241D60C89E00C4D6EF /* SingleVIewController.swift */,
 				87BD87221D60B7E600C4D6EF /* RecetaCell.swift */,
 				87BD86E71D5E655900C4D6EF /* iRecetas */,
 				87BD86E61D5E655900C4D6EF /* Products */,
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BD86FB1D5E689100C4D6EF /* Recetas.swift in Sources */,
+				87BD87251D60C89E00C4D6EF /* SingleVIewController.swift in Sources */,
+				87BD87271D60CA3B00C4D6EF /* RecetaCompletaTableViewCell.swift in Sources */,
 				87BD86EB1D5E655900C4D6EF /* ViewController.swift in Sources */,
 				87BD86E91D5E655900C4D6EF /* AppDelegate.swift in Sources */,
 				87BD87231D60B7E600C4D6EF /* RecetaCell.swift in Sources */,

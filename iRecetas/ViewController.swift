@@ -69,7 +69,7 @@ class ViewController: UITableViewController {
     
       let cellID = "cellIdentifier"
         
-      let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! RecetaCell
+      let cell = self.tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! RecetaCell
      // cell.textLabel?.text = recetas.nombre
      // cell.imageView?.image = recetas.image
        

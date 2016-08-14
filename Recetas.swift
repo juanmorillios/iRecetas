@@ -17,6 +17,8 @@ class Recetas: NSObject {
     var ingredientes : [String]!
     var pasos : [String]!
     
+
+    
     
     //Creamos el constructor de la clase
     init(nombre: String, image: UIImage, tiempoCocion: Int, ingredientes: [String], pasos: [String]) {
@@ -25,7 +27,6 @@ class Recetas: NSObject {
         self.tiempoCocion = tiempoCocion
         self.ingredientes = ingredientes
         self.pasos = pasos
-        
         
     }
     
