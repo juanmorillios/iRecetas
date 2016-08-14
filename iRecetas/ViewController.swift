@@ -17,10 +17,10 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
       
         //Lista de recetas  a mostrar
-        var receta = Recetas(nombre: "Ensalada Rusa", image: #imageLiteral(resourceName: "paella"))
+        let receta = Recetas(nombre: "Ensalada Rusa", image: #imageLiteral(resourceName: "paella"), tiempoCocion: 2, ingredientes: ["Patata","Huevos","Margarina"], pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
     
-        receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"))
+     /*   receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"))
         recetas.append(receta)
         
         receta = Recetas(nombre: "Pizza Napolitana", image: #imageLiteral(resourceName: "pizza"))
@@ -29,6 +29,7 @@ class ViewController: UITableViewController {
         receta = Recetas(nombre: "Paellla a la Valenciana", image: #imageLiteral(resourceName: "paella"))
         recetas.append(receta)
         
+ */
     }
     
 

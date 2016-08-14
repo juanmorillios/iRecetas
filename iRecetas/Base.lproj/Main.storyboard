@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,18 +12,59 @@
         <scene sceneID="I3F-x2-Blg">
             <objects>
                 <tableViewController id="08S-zC-Rj8" customClass="ViewController" customModule="iRecetas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qve-IY-vpy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" id="qve-IY-vpy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="bFa-GG-hGB">
-                                <frame key="frameInset" minY="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" rowHeight="100" id="bFa-GG-hGB" customClass="RecetaCell" customModule="iRecetas" customModuleProvider="target">
+                                <frame key="frameInset" minY="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bFa-GG-hGB" id="BaN-ib-q47">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OUc-Uo-wBy">
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="OUc-Uo-wBy" secondAttribute="height" multiplier="1:1" id="JAT-9l-1AF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JZf-Rq-egP">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-aW-S2k">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvR-mD-5be">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="106-2h-cyQ">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-UltraLightItalic" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JZf-Rq-egP" secondAttribute="bottom" constant="8" id="3Rq-E6-5oI"/>
+                                        <constraint firstItem="OUc-Uo-wBy" firstAttribute="top" secondItem="BaN-ib-q47" secondAttribute="top" constant="8" id="LmZ-wL-rW8"/>
+                                        <constraint firstItem="JZf-Rq-egP" firstAttribute="leading" secondItem="OUc-Uo-wBy" secondAttribute="trailing" constant="20" id="OK4-9l-3EV"/>
+                                        <constraint firstItem="OUc-Uo-wBy" firstAttribute="leading" secondItem="BaN-ib-q47" secondAttribute="leading" constant="8" id="YBn-n0-AOD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JZf-Rq-egP" secondAttribute="trailing" constant="20" id="ltm-g3-FYt"/>
+                                        <constraint firstItem="JZf-Rq-egP" firstAttribute="top" secondItem="BaN-ib-q47" secondAttribute="topMargin" constant="8" id="mzF-wp-vb1"/>
+                                        <constraint firstAttribute="bottom" secondItem="OUc-Uo-wBy" secondAttribute="bottom" constant="8" id="pET-1b-SbB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientesLabel" destination="106-2h-cyQ" id="L3d-AJ-E0g"/>
+                                    <outlet property="nameLabel" destination="SIj-aW-S2k" id="RCn-GS-w0I"/>
+                                    <outlet property="smallimage" destination="OUc-Uo-wBy" id="tQV-TP-eEV"/>
+                                    <outlet property="timeLabel" destination="FvR-mD-5be" id="l5r-W7-BUy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,7 +75,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYo-ej-p84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="-344"/>
+            <point key="canvasLocation" x="418.39999999999998" y="-394.45277361319341"/>
         </scene>
     </scenes>
 </document>
