@@ -17,19 +17,31 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
       
         //Lista de recetas  a mostrar
-        let receta = Recetas(nombre: "Ensalada Rusa", image: #imageLiteral(resourceName: "paella"), tiempoCocion: 2, ingredientes: ["Patata","Huevos","Margarina"], pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
+        var receta = Recetas(nombre: "Ensalada Rusa",
+                             image: #imageLiteral(resourceName: "paella"),
+                             tiempoCocion: 12,
+                             ingredientes: ["Patata","Huevos","Margarina"],
+                             pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
     
-     /*   receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"))
+   receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"),
+                                            tiempoCocion: 12,
+                                            ingredientes: ["Patata","Huevos","Margarina"],
+                                            pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Pizza Napolitana", image: #imageLiteral(resourceName: "pizza"))
+         receta = Recetas(nombre: "Pizza Napolitana", image: #imageLiteral(resourceName: "pizza"),
+                                                        tiempoCocion: 12,
+                                                        ingredientes: ["Patata","Huevos","Margarina"],
+                                                        pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Paellla a la Valenciana", image: #imageLiteral(resourceName: "paella"))
+         receta = Recetas(nombre: "Paellla a la Valenciana", image: #imageLiteral(resourceName: "paella"),
+                                                            tiempoCocion: 12,
+                                                            ingredientes:["Patata","Huevos","Margarina"],
+                                                            pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
-        
- */
+
     }
     
 
@@ -57,9 +69,19 @@ class ViewController: UITableViewController {
     
       let cellID = "cellIdentifier"
         
-      let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-      cell.textLabel?.text = recetas.nombre
-      cell.imageView?.image = recetas.image
+      let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! RecetaCell
+     // cell.textLabel?.text = recetas.nombre
+     // cell.imageView?.image = recetas.image
+       
+        cell.smallimage.image = recetas.image
+       cell.nameLabel.text = recetas.nombre
+       cell.ingredientesLabel.text = "Ingredientes: \(recetas.ingredientes.count)"
+       cell.timeLabel.text = "\(recetas.tiempoCocion!) min."
+       
+        //Aplicar cambios a la imagen para que sea Circular por código
+       //cell.smallimage.layer.cornerRadius = 42.0
+       //cell.smallimage.clipsToBounds = true
+       
         
         return cell
     
