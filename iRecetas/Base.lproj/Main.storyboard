@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="08S-zC-Rj8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="thQ-8F-qO9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
@@ -98,19 +98,24 @@
                                     <frame key="frameInset" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-mX-eF6" userLabel="portada">
-                                            <frame key="frameInset" minX="8" width="359" height="149"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-vP-tyM">
-                                            <frame key="frameInset" minX="8" minY="58" width="359" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-mX-eF6" userLabel="portada"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-vP-tyM">
                                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lJT-mX-eF6" secondAttribute="bottom" constant="-9" id="8OQ-QZ-1ic"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jfw-vP-tyM" secondAttribute="trailing" constant="8" id="BPY-tP-F0X"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jfw-vP-tyM" secondAttribute="bottom" constant="49" id="JFu-PF-5M8"/>
+                                        <constraint firstItem="lJT-mX-eF6" firstAttribute="leading" secondItem="1qW-9H-UfE" secondAttribute="leading" constant="8" id="Ntl-Nv-iIP"/>
+                                        <constraint firstItem="Jfw-vP-tyM" firstAttribute="top" secondItem="1qW-9H-UfE" secondAttribute="top" constant="58" id="S18-To-A2g"/>
+                                        <constraint firstAttribute="trailing" secondItem="lJT-mX-eF6" secondAttribute="trailing" constant="8" id="Tcf-I3-Z9N"/>
+                                        <constraint firstItem="lJT-mX-eF6" firstAttribute="top" secondItem="1qW-9H-UfE" secondAttribute="top" constant="8" id="dww-it-3dA"/>
+                                        <constraint firstItem="Jfw-vP-tyM" firstAttribute="leading" secondItem="1qW-9H-UfE" secondAttribute="leading" constant="8" id="lkH-3P-rnD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="portadaRecetaImage" destination="lJT-mX-eF6" id="0NZ-C4-3Ai"/>

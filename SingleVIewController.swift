@@ -17,6 +17,8 @@ class SingleVIewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 150
+        
         //Lista de recetas  a mostrar
         var receta = Recetas(nombre: "Ensalada Rusa",
                              image: #imageLiteral(resourceName: "paella"),
