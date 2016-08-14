@@ -20,10 +20,10 @@ class SingleVIewController: UIViewController {
         tableView.rowHeight = 150
         
         //Lista de recetas  a mostrar
-        var receta = Recetas(nombre: "Ensalada Rusa",
-                             image: #imageLiteral(resourceName: "paella"),
+        var receta = Recetas(nombre: "Sancocho Dominicano",
+                             image: #imageLiteral(resourceName: "pasteles"),
                              tiempoCocion: 12,
-                             ingredientes: ["Patata","Huevos","Margarina"],
+                             ingredientes: ["1 libra carne de chivo","1 libra longaniza","1 libra carne de cerdo", "2 libras carne de res con hueso", "1 pollo entero de 2 libras", "2 libras de costilas"],
                              pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         

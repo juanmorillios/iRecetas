@@ -18,7 +18,7 @@ class ViewController: UITableViewController {
       
         //Lista de recetas  a mostrar
         var receta = Recetas(nombre: "Ensalada Rusa",
-                             image: #imageLiteral(resourceName: "paella"),
+                             image: #imageLiteral(resourceName: "ensalada"),
                              tiempoCocion: 12,
                              ingredientes: ["Patata","Huevos","Margarina"],
                              pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
