@@ -17,6 +17,9 @@ class SingleVIewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         tableView.rowHeight = 150
         
         //Lista de recetas  a mostrar
