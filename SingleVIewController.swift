@@ -24,25 +24,25 @@ class SingleVIewController: UIViewController {
         
         //Lista de recetas  a mostrar
         var receta = Recetas(nombre: "Sancocho Dominicano",
-                             image: #imageLiteral(resourceName: "pasteles"),
+                             image: #imageLiteral(resourceName: "Sancocho"),
                              tiempoCocion: 12,
                              ingredientes: ["1 libra carne de chivo","1 libra longaniza","1 libra carne de cerdo", "2 libras carne de res con hueso", "1 pollo entero de 2 libras", "2 libras de costilas"],
                              pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Pollo alast", image: #imageLiteral(resourceName: "pollo"),
+        receta = Recetas(nombre: "Pasteles", image: #imageLiteral(resourceName: "pasteles"),
                          tiempoCocion: 12,
                          ingredientes: ["Patata","Huevos","Margarina"],
                          pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Pizza Napolitana", image: #imageLiteral(resourceName: "pizza"),
+        receta = Recetas(nombre: "Habichuelas con dulce", image: #imageLiteral(resourceName: "Habichuelas "),
                          tiempoCocion: 12,
                          ingredientes: ["Patata","Huevos","Margarina"],
                          pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Paellla a la Valenciana", image: #imageLiteral(resourceName: "paella"),
+        receta = Recetas(nombre: "Pastelón de Carne", image: #imageLiteral(resourceName: "Pastelon"),
                          tiempoCocion: 12,
                          ingredientes:["Patata","Huevos","Margarina"],
                          pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
