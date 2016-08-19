@@ -15,6 +15,9 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 100
+        
       
         //Lista de recetas  a mostrar
         var receta = Recetas(nombre: "Ensalada Rusa",
@@ -83,8 +86,25 @@ class ViewController: UITableViewController {
        //cell.smallimage.clipsToBounds = true
        
         
+        
+        
         return cell
     
+    }
+    
+    
+    
+    //MARK: UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alertViewController = UIAlertController(title: nil, message: "Favorito", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        
+        alertViewController.addAction(cancelAction)
+        
+        
     }
     
 
