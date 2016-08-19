@@ -108,6 +108,50 @@ extension SingleVIewController: UITableViewDataSource, UITableViewDelegate {
         
     }
   
+    //MARK: UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let receta = self.recetas[indexPath.row]
+        
+        
+        let alertViewController = UIAlertController(title: "\(receta.nombre!)", message: "Valora ésta receta", preferredStyle: .alert)
+        
+        
+        var favoriteActionTitle = "Favorito"
+        var favouriteActionStyle = UIAlertActionStyle.default
+        
+        
+        if receta.isFavorite {
+            
+            favoriteActionTitle = "No es favorito"
+            favouriteActionStyle = UIAlertActionStyle.destructive
+            
+        }
+        
+        
+        let favoriteAction = UIAlertAction(title: favoriteActionTitle, style: favouriteActionStyle) {(action) in
+            
+            //Recuperamos el número de celda seleccionada
+            let receta = self.recetas[indexPath.row]
+            
+            //Cambiamos el estado de la receta de normal a favorita
+            receta.isFavorite = !receta.isFavorite
+            
+            //Actualizamos toda la tabla después de haber seleccionada como receta favorita
+            self.tableView.reloadData()
+            
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alertViewController.addAction(cancelAction)
+        
+        alertViewController.addAction(favoriteAction)
+        self.present(alertViewController, animated: true, completion: nil)
+        
+    }
+
     
 
 }
