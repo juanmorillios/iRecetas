@@ -20,8 +20,7 @@ class SingleVIewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        tableView.rowHeight = 150
-        
+        tableView.rowHeight = 175
         //Lista de recetas  a mostrar
         var receta = Recetas(nombre: "Sancocho Dominicano",
                              image: #imageLiteral(resourceName: "Sancocho"),
@@ -30,7 +29,7 @@ class SingleVIewController: UIViewController {
                              pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
         recetas.append(receta)
         
-        receta = Recetas(nombre: "Pasteles", image: #imageLiteral(resourceName: "pasteles"),
+        receta = Recetas(nombre: "Pasteles en Hoja", image: #imageLiteral(resourceName: "pasteles"),
                          tiempoCocion: 12,
                          ingredientes: ["Patata","Huevos","Margarina"],
                          pasos: ["Paso1: Hervir las patatas y Huevos","Paso2: Mezclarlo todo","Paso3: Poner mayonesa + huevos + atún"])
@@ -49,6 +48,8 @@ class SingleVIewController: UIViewController {
         recetas.append(receta)
         
     }
+    
+ 
     
     
         
@@ -109,6 +110,13 @@ extension SingleVIewController: UITableViewDataSource, UITableViewDelegate {
   
     
 
+}
+
+
+ func prefersStatuBarHidden() -> Bool {
+    
+    return true
+    
 }
 
 
