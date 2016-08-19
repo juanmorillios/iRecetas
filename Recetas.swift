@@ -16,7 +16,7 @@ class Recetas: NSObject {
     var tiempoCocion : Int!
     var ingredientes : [String]!
     var pasos : [String]!
-    
+    var isFavorite: Bool = false
 
     
     

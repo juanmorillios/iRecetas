@@ -67,7 +67,8 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+    
+    
       let recetas = self.recetas[indexPath.row]
     
       let cellID = "cellIdentifier"
@@ -86,6 +87,17 @@ class ViewController: UITableViewController {
        //cell.smallimage.clipsToBounds = true
        
         
+        //Asignamos la imagen que representa fvorito a la receta.
+        if recetas.isFavorite {
+        
+            cell.accessoryType = .checkmark
+            
+        
+        } else {
+        
+            cell.accessoryType = .none
+        
+        }
         
         
         return cell
@@ -93,17 +105,47 @@ class ViewController: UITableViewController {
     }
     
     
-    
     //MARK: UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let alertViewController = UIAlertController(title: nil, message: "Favorito", preferredStyle: .alert)
+        let receta = self.recetas[indexPath.row]
+        
+        
+        let alertViewController = UIAlertController(title: "\(receta.nombre!)", message: "Valora ésta receta", preferredStyle: .alert)
+        
+        
+        var favoriteActionTitle = "Favorito"
+        var favouriteActionStyle = UIAlertActionStyle.default
+        
+        
+        if receta.isFavorite {
+        
+        favoriteActionTitle = "No es favorito"
+        favouriteActionStyle = UIAlertActionStyle.destructive
+       
+        }
+        
+    
+        let favoriteAction = UIAlertAction(title: favoriteActionTitle, style: favouriteActionStyle) {(action) in
+            
+        //Recuperamos el número de celda seleccionada
+        let receta = self.recetas[indexPath.row]
+        
+        //Cambiamos el estado de la receta de normal a favorita
+        receta.isFavorite = !receta.isFavorite
+        
+        //Actualizamos toda la tabla después de haber seleccionada como receta favorita
+        self.tableView.reloadData()
+        
+        
+    }
         
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-        
         alertViewController.addAction(cancelAction)
         
+        alertViewController.addAction(favoriteAction)
+        self.present(alertViewController, animated: true, completion: nil)
         
     }
     
